@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Liquid Assets Bourbon Club - Join Now</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #1a0d0a;
+      color: #f4e8d6;
+      text-align: center;
+      padding: 2rem;
+      margin: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #2b1a12;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #d4a017;
+      margin-bottom: 1rem;
+    }
+    p { line-height: 1.6; margin: 1rem 0; }
+    .btn {
+      display: inline-block;
+      background: #d4a017;
+      color: #1a0d0a;
+      padding: 1rem 2rem;
+      margin: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #f0c040; }
+    .qr { margin: 2rem 0; }
+    .qr img { width: 200px; height: 200px; }
+    footer { margin-top: 3rem; font-size: 0.9rem; color: #aaa; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Liquid Assets Bourbon Club</h1>
+    <p><strong>Exclusive access to rare bourbon releases, private tastings, and member-only events.</strong></p>
+    <p>Annual Membership: <strong>$200</strong></p>
+
+    <div class="qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://YOUR-GITHUB-USERNAME.github.io/liquid-assets-bourbon-club" alt="Scan to Join">
+    </div>
+
+    <p><strong>Step 1:</strong> Fill out your info</p>
+    <a href="https://forms.gle/YOUR_FORM_LINK_HERE" class="btn" target="_blank">Complete Signup Form</a>
+
+    <p><strong>Step 2:</strong> Pay the $200 fee</p>
+    <a href="https://buy.stripe.com/YOUR_STRIPE_LINK_HERE" class="btn" target="_blank">Pay $200 Now</a>
+
+    <p>After payment, you’ll receive a welcome email with your member kit.</p>
+  </div>
+
+  <footer>
+    &copy; 2025 Liquid Assets Bourbon Club | <a href="mailto:info@liquidassets.club" style="color:#d4a017;">Contact Us</a>
+  </footer>
+
+  <script>
+    // Optional: Auto-replace placeholder after load
+    document.addEventListener("DOMContentLoaded", () => {
+      const url = window.location.href;
+      document.querySelector('.qr img').src = 
+        `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(url)}`;
+    });
+  </script>
+</body>
+</html>
